@@ -6,13 +6,35 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.webkit.*;
+
+
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void o nCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        WebView webview = new WebView(this);
+        WebView wv = (WebView) findViewById(R.id.mainpage);
+
+        setContentView(webview);
+        webview.setWebViewClient(new WebViewClient());
+        webview.loadUrl("http://www.rit.edu/sg/ihouse/");
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
